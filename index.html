@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Isaac ❤️</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+      background: #ffe6f0;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #yes {
+      background: #ff4d88;
+      color: white;
+    }
+
+    #no {
+      background: #888;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Do you like Isaac? 😳</h1>
+
+<button id="yes">Yes ❤️</button>
+<button id="no">No 💔</button>
+
+<script>
+  let yesBtn = document.getElementById("yes");
+  let noBtn = document.getElementById("no");
+
+  let yesSize = 24;
+  let noSize = 24;
+
+  noBtn.addEventListener("click", () => {
+    yesSize += 8;
+    noSize -= 4;
+
+    yesBtn.style.fontSize = yesSize + "px";
+    noBtn.style.fontSize = noSize + "px";
+
+    if (noSize <= 5) {
+      noBtn.style.display = "none";
+    }
+  });
+
+  yesBtn.addEventListener("click", () => {
+    document.body.innerHTML = "<h1>YAYYY 😍❤️</h1>";
+  });
+</script>
+
+</body>
+</html>
